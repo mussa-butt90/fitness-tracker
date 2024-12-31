@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Fitness Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <h1>Fitness Tracker</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#goal-setting">Goals</a></li>
+                <li><a href="#activity-log">Activity</a></li>
+                <li><a href="#diet-log">Diet</a></li>
+                <li><a href="#charts">Charts</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="home" class="home">
+    <div class="hero">
+        <h1>Track Your Fitness Journey</h1>
+        <p>Set goals, log activities, and monitor your progress.</p>
+        <a href="#goal-setting" class="cta-btn">Start Setting Goals</a>
+    </div>
+</section>
+
+<section id="goal-setting" class="section">
+    <h2>Goal Setting</h2>
+    <form id="goal-form">
+        <div class="form-group">
+            <label for="goal">Goal</label>
+            <input type="text" id="goal" placeholder="e.g., Lose 5kg" required>
+        </div>
+        <div class="form-group">
+            <label for="target">Target</label>
+            <input type="number" id="target" placeholder="Target value (e.g., 5 kg)" required>
+        </div>
+        <div class="form-group">
+            <label for="unit">Unit</label>
+            <select id="unit">
+                <option value="kg">kg</option>
+                <option value="minutes">Minutes</option>
+                <option value="calories">Calories</option>
+            </select>
+        </div>
+        <button type="submit" class="submit-btn">Add Goal</button>
+    </form>
+    <ul id="goal-list"></ul>
+</section>
+
+<section id="activity-log" class="section">
+    <h2>Activity Log</h2>
+    <form id="activity-form">
+        <div class="form-group">
+            <label for="activity">Activity</label>
+            <input type="text" id="activity" placeholder="e.g., Running" required>
+        </div>
+        <div class="form-group">
+            <label for="duration">Duration (in minutes)</label>
+            <input type="number" id="duration" required>
+        </div>
+        <div class="form-group">
+            <label for="activity-date">Date</label>
+            <input type="date" id="activity-date" required>
+        </div>
+        <button type="submit" class="submit-btn">Log Activity</button>
+    </form>
+    <ul id="activity-list"></ul>
+</section>
+
+<section id="diet-log" class="section">
+    <h2>Diet Log</h2>
+    <form id="diet-form">
+        <div class="form-group">
+            <label for="meal">Meal</label>
+            <input type="text" id="meal" placeholder="e.g., Breakfast" required>
+        </div>
+        <div class="form-group">
+            <label for="calories">Calories</label>
+            <input type="number" id="calories" required>
+        </div>
+        <div class="form-group">
+            <label for="meal-date">Date</label>
+            <input type="date" id="meal-date" required>
+        </div>
+        <button type="submit" class="submit-btn">Log Meal</button>
+    </form>
+    <ul id="diet-list"></ul>
+</section>
+
+<section id="charts" class="section">
+    <h2>Your Progress</h2>
+    <div class="chart-container">
+        <h3>Weekly Activity</h3>
+        <canvas id="weekly-activity-chart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h3>Monthly Activity</h3>
+        <canvas id="monthly-activity-chart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h3>Daily Workout</h3>
+        <canvas id="daily-workout-chart" width="400" height="200"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h3>Diet Plan</h3>
+        <canvas id="diet-plan-chart" width="400" height="200"></canvas>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2024 Fitness Tracker | Designed by Your Name</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
